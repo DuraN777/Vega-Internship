@@ -1,0 +1,42 @@
+.footer {
+  padding: 20px 0;
+  background-color: $light-silver;
+}
+
+.footer__items {
+  display: flex;
+
+  @include mobile {
+    flex: 2;
+    flex-basis: 100%;
+    justify-content: center;
+  }
+}
+
+.footer__item {
+  margin-right: 16px;
+
+   &:last-child {
+    margin-right: 0;
+   }
+}
+
+.footer__link {
+  color: $charcoal;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.footer__copyright {
+  font-size: 14px; 
+  color: $charcoal;
+
+  @include mobile {
+    margin-top: 20px;
+    align-self: center;
+  }
+}
+
+
+

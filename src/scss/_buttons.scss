@@ -1,0 +1,53 @@
+.btn {
+  padding: 10px 16px;
+  background: $orange;
+  border-radius: 5px;
+  border: 1px $orange solid;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: $white;
+  cursor: pointer;
+  width: max-content;
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 28px;
+    padding: 10px 24px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn--text-img {
+  padding: 10px 16px;
+
+  @include mobile {
+    padding: 11px 23px;
+  }
+}
+
+.btn-submit {
+  background-color: transparent;
+  border: 1px $white solid;
+  color: $white;
+  align-self: center;
+}
+
+.search__btn,
+.header__close-search,
+.header__open-search,
+.icon-arrow-right--btn,
+.header__hamburger,
+.tabs__btn,
+.tabs__archiveBtn,
+.tabs__btnMobile {
+  padding: 0;
+  border: none;
+  outline: none;
+  color: inherit;
+  background: none
+}

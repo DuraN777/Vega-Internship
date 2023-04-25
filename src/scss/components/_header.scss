@@ -1,0 +1,427 @@
+.header {
+  @include tablet {
+    position: relative;
+  }
+}
+
+.nav {
+  @include tablet {
+    display: none;
+  }
+}
+
+.nav.header__hamburger--open {
+  display: block;
+  position: absolute;
+  top: 79px;
+  left: 0;
+  padding: 10px 20px;
+  width: 100%;
+  border-top: 2px $grey solid;
+
+  @include mobile {
+    padding: 0px 0px;
+  }
+}
+
+main.header__hamburger--open,
+footer.header__hamburger--open {
+  display: none;
+}
+
+.header__logo-img {
+  @include tablet {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.nav__list {
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 20px;
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include mobile {
+    margin-top: 11px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.nav__item {
+  position: relative;
+  padding: 70px 15px;
+
+  @include tablet {
+    padding: 0;
+    border-bottom: 1px solid $grey;
+    padding: 30px 20px 26px 20px;
+  }
+
+  @include mobile {
+    padding: 20px 0 20px 0;
+    margin: 0 20px;
+
+    // Dal je potrebno ili je do dizajna?
+    &:last-child {
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.nav__link{
+  color: $black;
+}
+
+.nav__submenu {
+  display: none;
+
+  @include tablet {
+    padding: 29px 40px 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @include mobile {
+    padding: 22px 40px 11px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.nav__submenu.nav__submenu--open {
+  @include tablet {
+    display: block;
+    // padding: 29px 40px 4px;
+    // font-weight: 500;
+    // font-size: 16px;
+    // line-height: 16px;
+  }
+}
+
+.nav__item:hover .nav__submenu {
+  @include laptop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    width: max-content;
+    padding: 40px 65px;
+    list-style: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    border-radius: 10px;
+    
+    transform: translateX(-50%);
+    background-color: $white;
+  }
+}
+
+.nav__item--droplist:hover {
+  @include laptop {
+    background-color: $grey;
+  }
+}
+
+.nav__submenu-item {
+  margin-bottom: 30px;
+
+  @include tablet {
+    margin-bottom: 22px;
+  }
+}
+
+.nav__submenu::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid $white;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  transform: translateY(-60px);
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.nav__submenu-item:last-child {
+  margin-bottom: 0;
+}
+
+.nav__submenu-link {
+  color: $black;
+}
+
+  //Search Form   
+.search-form__btn-container {
+  position: relative;
+  height: 80px;
+  width: 80px;
+
+  @include tablet {
+    width: 30px;
+    height: 100%   
+  }
+}
+
+.search-form__search-icon {
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include tablet {
+    position: relative;
+    width: 30px;
+    top: unset;
+    left: unset;
+    transform: translate(0%, 10%);
+  }
+}
+
+.search-form.search-form--active  .search-form__search-icon {
+  @include tablet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-29px, -34%);
+    width: 26px;
+  }
+
+  @include mobile {
+    transform: translate(-16px, -28%);
+    width: 21px;
+  }
+}
+
+.search-form__closeBtn {
+  display: none;
+}
+
+.search-form.search-form--active  .search-form__closeBtn {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  right: 30px;
+  top: 20px;
+  background: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  margin-left: auto; 
+
+  @include tablet {
+    right: 20px;
+  }
+
+  @include mobile {
+    width: 36px;
+    height: 20px;
+    right: 13px;
+  }
+}
+
+.search-form__closeBtn::before,
+.search-form__closeBtn::after {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 5px;
+  background-color: $charcoal;
+  @include mobile {
+    height: 26px;
+    width: 3px;
+  }
+}
+
+.search-form__closeBtn::before {
+  transform: rotate(45deg);
+}
+
+.search-form__closeBtn::after {
+  transform: rotate(-45deg);
+}
+
+.search-form__input {
+  display: none;
+  width: 100%;
+  padding: 30px 80px 16px 30px;
+  border: none;
+  border-bottom: 2px solid $grey;
+  font-size: 35px;
+  line-height: 36px;
+  letter-spacing: 1.5px;
+  color: $black;
+
+  @include tablet {
+    font-size: 28px;
+    line-height: 29px;
+    padding: 30px 60px 10px 20px
+  }
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.search-form__input::placeholder {
+  color: $charcoal;
+  letter-spacing: 1.5px;
+
+  @include mobile {
+    letter-spacing: 0;
+  }
+}
+
+.search-form--active {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+   // Da li je dizajn inkozistentan. da li treba sredina?
+// .search-form.search-form--active .search-form__wrap {
+//   margin-top: 176px;
+
+//   @include tablet {
+//     margin-top: 0;
+//   }
+// }
+
+.search-form.search-form--active .search-form__input {
+  display: block;
+}
+
+.search-form.search-form--active .search-form__input:focus {
+  outline: none;
+} 
+
+.search-form.search-form--active .search-form__btn-container {
+  position: absolute;
+  right: 20px;
+}
+
+//Hamburger menu
+.header__container {
+  display: flex;
+}
+
+.header__hamburger {
+  display: none;
+  @include tablet {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 40px;
+    margin-left: 30px;
+  }
+
+  @include mobile {
+    margin-left: 25px;
+    margin-bottom: 1px;
+  }
+}
+
+.header__hamburger-el {
+  background-color: $charcoal;
+  width: 100%;
+  height: 3px;
+
+  @include mobile {
+    margin-bottom: 5px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    background-color: $charcoal;
+    transition: all .45s ease-in-out;
+    height: 3px;
+  }
+
+  &::before {
+    top: 10px;
+    transform: rotate(0);
+
+    @include mobile {
+      top: 8px;
+    }
+  }
+  &::after {
+    bottom: 10px;
+
+    @include mobile {
+      bottom: 13px
+    }
+  }
+}
+
+.header__hamburger.header__hamburger--open .header__hamburger-el {
+  height: 0;
+  
+  &::before {
+    top: 17px;
+    transform: rotate(45deg);
+  }
+  &::after {
+    top: 17px;
+    transform: rotate(-45deg);
+  }
+}
+
+.header__container.header__hamburger--open .search-form__btn-container {
+  @include tablet {
+    display: none;
+  }
+}
+
+.material-symbols-outlined  {
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+    font-size: 16px;
+    color: $orange;
+  }
+}
+
+.icon-arrow-right--rotate {
+  transform: rotate(90deg);
+}
+
+.nav__link {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
