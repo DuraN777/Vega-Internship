@@ -11,3 +11,6 @@ Node.js and Gulp were used to:
 
 ### To make development changes 
 Download the project and run npm install to install dependencies.
+
+### To view the page 
+Download dist folder, open index.html.
