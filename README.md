@@ -1,5 +1,5 @@
 # Vega internhip project
-One of the projects I did during a three-week internship at VEGA IT. The task was to make a responsive and pixel perfect page based on the design given in FIGMA.
+One of the projects I did during an internship at VEGA IT. The task was to make a responsive and pixel perfect page based on the design given in FIGMA.
 
 ## Project Details
 Styling was done in SASS and class names adhere to BEM naming principles.
