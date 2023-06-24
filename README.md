@@ -13,4 +13,4 @@ Node.js and Gulp were used to:
 Download the project and run npm install to install dependencies.
 
 ### To view the page 
-Download dist folder, open index.html.
+[Go to this link](https://frontend-internship-project.netlify.app/)
